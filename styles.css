@@ -1,0 +1,104 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif, "Kai";
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scroll bars */
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flashcard-container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+  }
+  
+  .flashcard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    transform: rotateY(0);
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  
+  .front {
+    background-color: #fff;
+    font-size: 10rem;
+    z-index: 2;
+  }
+  
+  .back {
+    background-color: #f7f7f7;
+    font-size: 2rem;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    z-index: 1; 
+  }
+
+  .english {
+    font-weight: bold;
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+  }
+  
+  .common-words {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .common-words li {
+    margin-bottom: 5px;
+  }
+
+
+  .front.level-1 {
+    background-color: #F6D55C; 
+  }
+  
+  .front.level-2 {
+    background-color: #ca6acf; 
+  }
+  
+  .front.level-3 {
+    background-color: #ef6b53;
+  }
+  
+  .front.level-4 {
+    background-color: #20639B;
+  }
+  
+  .front.level-5 {
+    background-color: #1bca64;
+  }
